@@ -47,9 +47,8 @@ jobs:
           ccache -z
       - uses: ./.github/actions/default
       - run: ccache -s
-      - if: ${{ failure() }}
-        uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v4
         with:
-          name: Logs ${{ github.job }}
-          path: config.log
+          name: Compiled-Artifacts-${{ matrix.test }}
+          path: /
           retention-days: 5
