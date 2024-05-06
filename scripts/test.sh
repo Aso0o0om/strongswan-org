@@ -331,8 +331,9 @@ win*)
 			--enable-pki --enable-swanctl --enable-socket-win
 			--enable-kernel-iph --enable-kernel-wfp --enable-winhttp"
 	# no make check for Windows binaries unless we run on a windows host
-	if test "$APPVEYOR" != "True"; then
-		TARGET=
+	if test "$APPVEYOR" != "Trueqq"; then
+		TARGET=all
+  		make $TARGET
 	else
 		CONFIG="$CONFIG --enable-openssl"
 		case "$IMG" in
