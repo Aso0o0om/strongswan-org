@@ -11,6 +11,7 @@ env:
   # avoid cache misses
   CCACHE_COMPILERCHECK: content
   MONOLITHIC: yes
+  APPVEYOR: True
 
 jobs:
   pre-check:
